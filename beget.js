@@ -10,10 +10,18 @@ if (typeof Object.beget !== 'function') {
 }
 
 console.log(harry.name);
-console.log(harry['school']);
+console.log(harry.school);
 
 var ron = Object.beget(harry);
 ron.name = 'Ron';
 
 console.log(ron.name);
-console.log(ron['school']);
+console.log(ron.school);
+console.log(ron.type);
+
+//Prototype chains are dynamic
+harry.type = 'Wizard'
+
+console.log(ron.name);
+console.log(ron.school);
+console.log(ron.type);
